@@ -1,6 +1,6 @@
 const player = {
-  currentHealth: 10,
-  attackPower: 1,
+  currentHealth: 10000,
+  attackPower: 10000,
   gold: 0,
   potions: 0
 }

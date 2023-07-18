@@ -30,14 +30,14 @@ main .screen:not(.show) {
 }
 
 #start-screen {
-  background-image: url(start-screen.gif);
+  background-image: url(https://i.kym-cdn.com/photos/images/newsfeed/001/956/032/4e7.jpg);
   display: grid;
   place-content: center;
   z-index: 4;
 }
 
 #map-screen {
-  background-color: burlywood;
+  background-color: rgb(255, 0, 0);
   z-index: 2;
 }
 
@@ -52,7 +52,7 @@ main .screen:not(.show) {
   bottom: 20vh;
   left: 10vw;
   z-index: 2;
-  filter: drop-shadow(2px 4px 6px black);
+  filter: drop-shadow(2px 4px 6px rgba(255, 0, 0, 0.569));
 }
 
 .hero-container::after {

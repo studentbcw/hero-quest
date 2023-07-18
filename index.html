@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>⚔️ Hero's Quest! ⚔️</title>
+  <title>Sussy Quest</title>
   <script src="Test/main.js"></script>
   <link rel="stylesheet" href="/assets/bootstrapStyle.css">
   <link href="assets/style.css" rel="stylesheet" type="text/css" />
@@ -15,18 +15,20 @@
   <header class="container-fluid">
     <div class="row">
       <div class="col text-center text-light ">
-        <h1 class="mb-0">⚔️ Hero's Quest! ⚔️</h1>
+        <h1 class="mb-0">Sussy Quest</h1>
       </div>
     </div>
   </header>
-
+  let startScreen = document.getElementById('start-screen');
+  let mapScreen = document.getElementById('map-screen');
+  let stage1Screen = document.getElementById('stage-1-screen');
 
   <main>
 
     <!-- 🚩 THE START SCREEN -->
     <div class="screen" id="start-screen">
       <div class="action-box text-center">
-        <button class="btn text-light" onclick="showMap()">Start Game</button>
+        <button class="btn text-light" onclick="showMap()">Start The Sussyness</button>
       </div>
     </div>
 
@@ -42,15 +44,15 @@
         <div class="locations d-flex justify-content-around">
           <div class="action-box text-center show">
             <!-- TODO Make this button change the active screen to stage1 -->
-            <button class="btn text-light">The Jungle Ruins</button>
+            <button class="btn text-light">The Sussy Ruins</button>
           </div>
           <div class="action-box text-center show">
             <!-- TODO Make this button change the active screen to stage2 -->
-            <button class="btn text-light">The Crystal Caves</button>
+            <button class="btn text-light">The Crystal Susses </button>
           </div>
           <div class="action-box text-center show">
             <!-- TODO Make this button change the active screen to stage3 -->
-            <button class="btn text-light">The Dragons Den</button>
+            <button class="btn text-light">The Dragons Sus </button>
           </div>
         </div>
       </div>
@@ -59,7 +61,7 @@
         <div class="action-box show">
           <p class="fs-4 text-light text-center">
             <b>
-              Gear up before you heading out...
+              Get real Sussy before you heading out...
             </b>
           </p>
           <div class="store-items">
