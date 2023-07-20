@@ -6,11 +6,26 @@ const player = {
 }
 
 function healPlayer() {
-  // STUB
+  if(player.potion > 0){
+    player.potions --
+    player.currentHealth += 10
+    enemyTurn()
+    drawPlayer()
+    drawCurrentEnemy()
+  }else{
+    messageUser("u got no potiond bruh.")
+  }
 }
 
 function attackEnemy() {
-  // STUB
+  enemyTurn()
+  currentEnemy.health -= player.attackPower
+  if (currentEnemy.health <= 0){
+  rewardPlayer()
+  pickRandmEnemyFromCurrentStage()
+  }
+  drawPlayer()
+  drawCurrentEnemy()
 }
 
 function drawPlayer() {
@@ -22,19 +37,37 @@ function drawPlayer() {
 }
 
 function drawCurrentEnemy() {
-  //  STUB
+  document.getElementById('enemy-type').innerText = currentEnemy.type
+
+  document.getElementById('enemy-health').innerText =  '💖' +currentEnemy.health
+
+
 }
 
 function enemyTurn() {
   // STUB
+  const enemyDamage = Math.floor(math.random() * currentEnemy.maxAttackPower)
+player.currentHealth = enemyDamage
+messageUser("💔 took" + enemyDamage + "Damage")
+if(player.currentHealth <= 0) {
+  messageUser
+}("ur ded.")
+showGameOver
 }
 
 function rewardPlayer() {
-  // STUB
+  player.gold += currentEnemy.gold
+  if (player.gold >= 10000){
+    messsageUser("You have so much goshdang cash, you can just stop plaing this big hump of old, rotten, smelly, horrible crap.")
+    showVictory()
+  }
 }
 
 function buyPotion() {
-  // STUB
+  if pl
+  player.potions++
+  player.gold -= 5
+  }
 }
 
 function increaseAttack() {
