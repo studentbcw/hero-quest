@@ -1,14 +1,14 @@
 // FEEL free to play with the numbers or add additional enemies
 const stage1Enemies = [{
   type: 'Centaur',
-  health: 10,
-  gold: 100,
-  maxAttackPower: 0
+  health: 3,
+  gold: 3,
+  maxAttackPower: 2
 }, {
   type: 'Golem',
-  health: 10,
-  maxAttackPower: 0,
-  gold: 100,
+  health: 1,
+  maxAttackPower: 1,
+  gold: 1,
 }]
 
 const stage2Enemies = [{

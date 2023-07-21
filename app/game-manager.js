@@ -1,6 +1,6 @@
 const player = {
-  currentHealth: 10000,
-  attackPower: 10000,
+  currentHealth: 100,
+  attackPower: 10,
   gold: 0,
   potions: 0
 }
@@ -13,7 +13,7 @@ function healPlayer() {
     drawPlayer()
     drawCurrentEnemy()
   }else{
-    messageUser("u got no potiond bruh.")
+    messageUser("u got no drugs bruh.")
   }
 }
 
@@ -22,7 +22,7 @@ function attackEnemy() {
   currentEnemy.health -= player.attackPower
   if (currentEnemy.health <= 0){
   rewardPlayer()
-  pickRandmEnemyFromCurrentStage()
+  pickRandomEnemyFromCurrentStage()
   }
   drawPlayer()
   drawCurrentEnemy()
@@ -45,14 +45,13 @@ function drawCurrentEnemy() {
 }
 
 function enemyTurn() {
-  // STUB
-  const enemyDamage = Math.floor(math.random() * currentEnemy.maxAttackPower)
-player.currentHealth = enemyDamage
+  const enemyDamage = Math.floor(Math.random() * currentEnemy.maxAttackPower)
+player.currentHealth -= enemyDamage
 messageUser("💔 took" + enemyDamage + "Damage")
 if(player.currentHealth <= 0) {
-  messageUser
-}("ur ded.")
+  messageUser("ur ded.")
 showGameOver
+}
 }
 
 function rewardPlayer() {
@@ -64,14 +63,24 @@ function rewardPlayer() {
 }
 
 function buyPotion() {
-  if pl
+  if (player.gol = 5){
   player.potions++
   player.gold -= 5
+  messageUser("Drugs: " + player.potions)
+  drawPlayer()
+  }else{
+    messageUser("HAHA ur friggin poor.")
   }
 }
 
 function increaseAttack() {
-  // STUB
+if(player.gold >= 10) {
+  player.attackPower += 5
+  messageUser("UR ON DRUGS BRUDDAH")
+  drawPlayer()
+}else{
+  messagUser("HAHA ur friggin poor.")
+}
 }
 
 drawPlayer()
